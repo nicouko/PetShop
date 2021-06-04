@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco | Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos/diseno3.css">
+</head>
+<body>
+    <a href="index.html">Volver al home</a>
+    <main>
+        <img src="../images/francoBlanco.png" alt="franco_img">
+        <form action="">
+            <div>
+                <h2>Mantengamonos en contacto!</h2>
+                <div>
+                    <label for="nombre">Ingrese su nombre:</label>
+                    <input class="inputTexto" id="nombre" type="text">
+                </div>
+                <div>
+                    <label for="mail">E-mail:</label>
+                    <input class="inputTexto" id="mail" type="email">
+                </div>
+                <div>
+                    <label for="mascota">Tiene mascota? Que animal es?</label>
+                    <input class="inputTexto" type="text" id="mascota">
+                </div>
+                <div>
+                    <label for="consulta">Dejenos su consulta!</label>
+                    <input class="inputTexto" type="text" id="consulta">
+                </div>
+                <input id="submit" type="submit" value="SEND">
+            </div>
+        </form>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        let send=document.getElementById("submit")
+        send.addEventListener("click",()=>{
+            event.preventDefault()
+            swal("Enviado!", "El mensaje fue enviado con exito!", "success")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+h1,h3,h4,h6,p{
+    color: white;
+}
+
+body{
+    overflow-x: hidden;
+    background-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 3vh;
+    border-radius: 2vh;
+    transition-duration: 1s;
+}
+a:hover{
+    transition-duration: 1s;
+    color: black;
+    background-color: orange;
+}
+
+#sideBar{
+    position: absolute;
+    top:0;
+    width:25vw;
+    right:-25vw;
+    height: 100vh;
+    background-color: black;
+    transition-duration: 1s;
+    border-bottom-left-radius: 2vh;
+    overflow: auto;
+    border-style: groove;
+    border-width: 0.5vh;
+    color: beige;
+}
+#sideBar>h3{
+    margin-top: 2vh;
+    align-self: center;
+}
+#sideBar>section{
+    align-self: center;
+    max-height: 80%;
+    width:80%;
+}
+#sideBar>section>h5{
+    align-self: center;
+}
+#sideBar>section>div{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 3vh;
+}
+#sideBar>section>div>img{
+    height: 20vh;
+}
+#sideBar>button{
+    border-radius: 2vh;
+    background-color: yellowgreen;
+    margin-bottom: 2vh;
+}
+p>input{
+    width:3vw;
+    margin-left: 3vw;
+}
+
+/*------------------------------------HEADER----------------------------------*/
+header{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2vh;
+}
+
+#franco{
+    height: 25vh;
+    width: 15vw;
+    margin-left: 5vw;
+    background-color: orange;
+    border-bottom-right-radius: 6vh;
+    border-bottom-left-radius: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    cursor: pointer;
+    transition-duration: 1s;
+
+}
+#franco:hover{
+    background-color: rgb(28, 114, 194);
+    transition-duration: 1s;
+}
+
+#franco>img{
+    height: 18vh;
+    margin-top: 3vh;
+}
+#topper,header>nav{
+    align-self: center;
+    margin-left: 10vw;
+}
+h1{text-align: center;}
+
+#topper>div>label{
+    background-color: black;
+    color: orange;
+    font-weight: 600;
+    border-radius: 1vh;
+    border-style: none;
+    padding:1vh 2vh;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+#topper>div>label:hover{
+    transition-duration: 1s;
+    background-color: paleturquoise;
+    color:black;
+}
+#carrito{
+    align-self: center;
+    margin-left: 10vw;
+    padding: 2vh 2vw;
+    border-radius: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+#carrito:hover{
+    background-color: rgb(15, 15, 15);
+}
+#carrito>img{
+    margin-top: 2vh;
+    width: 3vw;
+}
+#carrito>p{
+    height:1vh;
+    font-weight: 500;
+}
+
+/*---------------------------------------MAIN--------------------------------------*/
+main{
+    background-color: black;
+}
+
+main>div{
+    width: 95%;
+    background-color: orange;
+    border-radius: 20vh;
+    margin-left: 2.5%;
+}
+
+li>div>button{
+    align-self: center;
+    border-style: none;
+    padding:0 1vw;
+    border-radius: 1vh;
+    background-color: blue;
+    color: white;
+}
+li>div>button:hover{
+    background-color: cadetblue;
+}
+
+li>img{
+    border-radius: 4vh;
+}
+
+li{
+    width:80vw;
+    height: 36vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin:4vh 0 6vh;
+    border-radius: 2vh;
+    text-align: center;
+}
+
+li:first-child{
+    margin-top: 8vh;
+}
+li:last-child{
+    margin-bottom: 8vh;
+}
+
+li>div{
+    margin:0 5vw;
+    background-color: black;
+    padding:1vh 3vw;
+    border-radius: 50vh;
+    width:100%;
+}
+
+#nada{
+    height: 49.5vh;
+}
+#nada>h4{
+    color: black;
+    width: 40vw;
+}
+
+#warn{
+    color:blanchedalmond;
+    background-color: red;
+    font-weight: 600;
+    border-radius: 1vh;
+    width: 18vw;
+    text-align: center;
+}

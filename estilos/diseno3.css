@@ -1,0 +1,61 @@
+a{
+    position:absolute;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    text-decoration: none;
+    font-weight: 600;
+    color: orange;
+    padding: 2vh;
+    border-radius: 4vh;
+    transition-duration: 1s;
+}
+a:hover{
+    color: black;
+    background-color: orange;
+    transition-duration: 1s;
+}
+
+main{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+img{
+    height: 70vh;
+    align-self: center;
+}
+h2{
+    align-self: center;
+}
+
+form{
+    background-color: orange;
+    border-radius: 10vw;
+    height: 90%;
+    width: 40vw;
+    align-self: center;
+}
+form>div{
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+}
+form>div>div{
+    margin-bottom:7vh;
+    margin-left: 3vw;
+}
+.inputTexto{
+    background-color: orange;
+    border-style: none;
+    border-bottom-style: dashed;
+}
+#submit{
+    width:10vw;
+    background-color: black;
+    color: white;
+    align-self: center;
+}

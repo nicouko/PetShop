@@ -1,0 +1,98 @@
+/*---------------------------GENERAL-----------------------------------*/
+#container{
+    display:flex;
+    flex-direction: column;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+h1{color:cornsilk}
+
+/*---------------------------HEADER----------------------------------*/
+header{
+    display:flex;
+    flex-direction: column;
+}
+
+header>*{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#top-header{height: 7vh;background-color: black;}
+.topIcon{height:5vh;margin: 1vh 3vw 1vh;cursor: pointer;}
+#top-header>a{margin-top: 1.5vh;color: white;}
+#top-header>a:hover{font-weight: 600;}
+
+nav{height:30vh;background-color: orange;}
+nav>img{height:25vh;margin-top: 2.5vh;}
+nav>div{margin-top: 6vh;width:30vw;}
+nav>div>h1{
+    margin: 0 1.5vw 4vh 1.5vw;
+    border-radius: 5vh;
+    background-color: black;
+    padding: 1vh;
+    text-align: center;
+}
+nav>div>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-weight: 600;
+}
+nav>div>div>a{
+    border-radius: 3vh;
+    padding: 1vh 2vh;
+}
+nav>div>div>a:hover{
+    color: white;
+    background-color: black;
+    transition-duration: 1s;
+}
+
+/*--------------------------MAIN-------------------------------------*/
+
+main{background-color: black;}
+
+
+.main-content-caroussel{
+    top: 45vh;
+    width: 100%;
+    position:absolute;
+}
+.carousel-item{
+    height:60vw;
+}
+
+section{
+    width:30vw;
+    border-radius: 2vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    z-index:99;
+    padding:2vh 2vh 4vh 2vh;
+}
+section>h3,section>p{color:black}
+section>img{height:30vh;border-radius: 2vh;}
+
+#lastSection{
+    width:70vw;
+    margin-top: 10vh;
+}
+#lastSection>p{
+    margin:0 2vw 0 2vw;
+}
+iframe{
+    height: 80%;
+    width: 80%;
+    margin-top: 2vh;
+    border-radius: 1vh;
+}
+
+/*----------------------------------------------FOOTER----------------------------------------*/
+
+footer{background-color: black;height: 7vh;}
+footer>h6{color:floralwhite;margin-top:2.5vh;}

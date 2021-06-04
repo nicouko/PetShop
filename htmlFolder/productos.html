@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco | Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="../estilos/diseno2.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div @click="goToIndex()" id="franco">
+                <img src="../images/franco.png" alt="franco_logo">
+            </div>
+            <div id="topper" class="d-flex flex-column justify-content-evenly">
+                <h1>Productos</h1>
+                <div class="mt-2">
+                    <label class="me-1" id="jugID" for="jug">Juguetes</label>
+                    <label class="ms-1" id="medID" for="med">Farmacia</label>
+                    <input id="med" type="radio" v-model="tipoDeProductos" class="d-none" value="Medicamentos"  @change="toggleSelect()">
+                    <input id="jug" type="radio" v-model="tipoDeProductos" class="d-none" value="Juguetes" @change="toggleSelect()">
+                </div>
+            </div>
+            <div @click="toggleCart" id="carrito">
+                <p>Checkea el carrito!</p>
+                <img src="https://icons555.com/images/icons-orange/image_icon_shopping_cart_pic_512x512.png" alt="shopping_cart_icon">
+            </div>
+            <nav>
+                <a href="contacto.html">Contactanos</a>
+            </nav>
+            <div id="sideBar" class="d-flex flex-column">
+                <h3>Tu carrito!</h3>
+                <section v-for="item in cart2" class="mt-4">
+                    <h5 class="mt-2">{{item.nombre}}</h5>
+                    <div class="d-flex flex-row">
+                        <img :src="item.imagen" alt="imagen_de_producto">
+                        <div>
+                            <p>${{item.precio}}</p>
+                        </div>
+                    </div>
+                </section>
+                <h4 class="ms-3 mt-4">Total: ${{calcTotal}}</h4>
+                <button class="ms-5 me-5 mt-3" @click="toggleAlert">COMPRAR</button>
+            </div>
+        </header>
+        <main>
+            <div>
+                <ul class="d-flex flex-wrap">
+                    <li v-for="producto in filtrarProductos">
+                        <img :src=[producto.imagen] alt="imagen_producto">
+                        <div>
+                            <h4>{{producto.nombre}}</h4>
+                            <p>{{producto.descripcion}}</p>
+                            <div class="d-flex flex-row justify-content-evenly">
+                                <p>{{`Precio: $${producto.precio}`}}</p>
+                                <p>{{`Stock: ${producto.stock}`}}</p>
+                                <p id="warn" v-if="producto.stock <= 5">Producto con bajo stock</p>
+                            </div>
+                            <button @click="meterSacar(producto)">Agregar al Carrito</button>
+                        </div>
+                    </li>
+                    <li id="nada" v-show="hayAlgo">
+                        <h4 class="ms-5">Fijate que no tenes nada seleccionado! Hace click en 'Juguetes' o en 'Farmacia' para mirar nuestros catalogos!</h4>
+                        <img src="https://media.tenor.com/images/2d39c2937b6adcf2e9f0b7bd258fb3f8/tenor.gif" alt="nothing_here">
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="../commander/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>
